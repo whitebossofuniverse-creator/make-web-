@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Runaway Subscribe Button</title>
+  <style>
+    body {
+      background: #111;
+      color: white;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .box {
+      background: #1f1f1f;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #6600ff;
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      margin: 15px 0;
+      background: #333;
+      color: white;
+    }
+
+    .btn-container {
+      position: relative;
+      height: 60px;
+    }
+
+    #subBtn {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 12px 25px;
+      font-size: 16px;
+      background: #6600ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    #subBtn:disabled {
+      background: grey;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h2>Subscribe to Dragon Channel 🐉</h2>
+    <input type="text" id="response" placeholder='Type: Yes, I really want!'>
+    <div class="btn-container">
+      <button id="subBtn">Subscribe</button>
+    </div>
+  </div>
+
+  <script>
+    const input = document.getElementById('response');
+    const button = document.getElementById('subBtn');
+    let btnLeft = 50;
+
+    function isCorrectAnswer() {
+      return input.value.trim().toLowerCase() === "yes, i really want!";
+    }
+
+    input.addEventListener('input', () => {
+      if (isCorrectAnswer()) {
+        button.textContent = "Subscribe Now!";
+        button.style.left = '50%';
+      } else {
+        button.textContent = "Subscribe";
+      }
+    });
+
+    button.addEventListener('mouseover', () => {
+      if (!isCorrectAnswer()) {
+        btnLeft = btnLeft === 30 ? 70 : 30;
+        button.style.left = btnLeft + '%';
+      }
+    });
+
+    button.addEventListener('click', () => {
+      if (isCorrectAnswer()) {
+        alert("You are now Subscribed, Dragon! 💜🔥");
+      }
+    });
+  </script>
+
+</body>
+</html>
