@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Runaway Subscribe Button</title>
+  <title>login</title>
   <style>
     body {
       background: #111;
@@ -65,7 +65,7 @@
 
   <div class="box">
     <h2>Subscribe to Dragon Channel 🐉</h2>
-    <input type="text" id="response" placeholder='Type: Yes, I really want!'>
+    <input type="text" id="response" placeholder='type your code here'>
     <div class="btn-container">
       <button id="subBtn">Subscribe</button>
     </div>
@@ -77,7 +77,7 @@
     let btnLeft = 50;
 
     function isCorrectAnswer() {
-      return input.value.trim().toLowerCase() === "yes, i really want!";
+      return input.value.trim().toLowerCase() === "codewithdragon";
     }
 
     input.addEventListener('input', () => {
@@ -98,7 +98,7 @@
 
     button.addEventListener('click', () => {
       if (isCorrectAnswer()) {
-        alert("You are now Subscribed, Dragon! 💜🔥");
+        window.location.href = "editor.html";
       }
     });
   </script>
