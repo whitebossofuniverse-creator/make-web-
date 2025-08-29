@@ -164,57 +164,6 @@
       transform: scale(1.1);
     }
 
-    /* ☁️ Float Animation */
-    @keyframes floaty {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0); }
-    }
-
-    /* 📜 Side Menu */
-    #side-menu {
-      position: fixed;
-      bottom: 110px;
-      left: 40px;
-      width: 220px;
-      background: var(--menu-bg);
-      border-radius: 8px;
-      padding: 15px;
-      color: white;
-      box-shadow: 0 0 10px black;
-      transform: translateX(-300px);
-      transition: transform 0.4s ease;
-      z-index: 9998;
-    }
-
-    #side-menu.active {
-      transform: translateX(0);
-    }
-
-    #side-menu h3 {
-      margin-top: 0;
-      color: #ffb74d;
-    }
-
-    #side-menu ul {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-    }
-
-    #side-menu li {
-      margin: 8px 0;
-    }
-
-    #side-menu a {
-      text-decoration: none;
-      color: #80d8ff;
-    }
-
-    #side-menu a:hover {
-      text-decoration: underline;
-    }
-
   </style>
 
 
@@ -258,24 +207,13 @@
   <div id="side-menu">
     <h3>📘 Help Menu</h3>
 
-         <div>
-        ✔️ <a href="https://www.w3schools.com/html/default.asp" target="_blank" class="text-blue-400 hover:underline">html learn with w3school</a>
-        </div>
-
+      
      
         <div>
         ✔️ <a href="HTML, XHTML, & CSS Bible, 3rd Edition (2004).pdf" target="_blank" class="text-blue-400 hover:underline">html bible 3rd eddition(2004)</a>
         </div>
 
 
-         <div>
-        ✔️ <a href="Beginning JavaScript 4e.pdf" target="_blank" class="text-blue-400 hover:underline">beginning javascript</a>
-        </div>
-
-
-        <div>
-        ✔️ <a href="https://www.w3schools.com/js/default.asp" target="_blank" class="text-blue-400 hover:underline">js learn with w3schools</a>
-        </div>
 
 
   </div>
