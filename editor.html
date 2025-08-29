@@ -142,28 +142,7 @@
       overflow: hidden;
     }
 
-    /* 🧊 Floating PNG Orb */
-    #floating-orb {
-      position: fixed;
-      bottom: 10px;
-      left: 10px;
-      width: 50px;
-      height: 55px;
-      cursor: wait;
-      z-index: 9999;
-      animation: floaty 4s ease-in-out infinite;
-    }
-
-    #floating-orb img {
-      width: 100%;
-      height: 100%;
-      transition: transform 0.3s;
-    }
-
-    #floating-orb:hover img {
-      transform: scale(1.1);
-    }
-
+   
   </style>
 
 
@@ -195,60 +174,6 @@
   </div>
 
   <footer>
-
-<!-------------------------------------------------->
-
-     <!-- 🧿 Floating Help Orb -->
-  <div id="floating-orb" title="Need Help?">
-    <img src="dragon-removebg-preview.png" alt="Help Orb">
-  </div>
-
-  <!-- 📜 Help Menu Bar -->
-  <div id="side-menu">
-    <h3>📘 Help Menu</h3>
-
-      
-     
-        <div>
-        ✔️ <a href="HTML, XHTML, & CSS Bible, 3rd Edition (2004).pdf" target="_blank" class="text-blue-400 hover:underline">html bible 3rd eddition(2004)</a>
-        </div>
-
-
-
-
-  </div>
-
-
-
-
-   <script>
-    const orb = document.getElementById("floating-orb");
-    const menu = document.getElementById("side-menu");
-
-    // Toggle menu when orb clicked
-    orb.addEventListener("click", (e) => {
-      menu.classList.toggle("active");
-      e.stopPropagation(); // Prevent from closing immediately
-    });
-
-    // Close menu if clicked outside
-    document.addEventListener("click", function (event) {
-      if (!menu.contains(event.target) && !orb.contains(event.target)) {
-        menu.classList.remove("active");
-      }
-    });
-  </script>
-
-
-
-<!-------------------------------------------------->
-
-
-
-
-
-
-
 
     <button class="btn" onclick="generateShareURL()">🔗 Share Link</button>
     <input type="text" class="share-url" id="share-url" readonly placeholder="Your shareable URL will appear here">
